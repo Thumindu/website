@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Meta tags -->	
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tour_World | BUY NOW</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="" name="keywords">
+<meta content="" name="description">
+
+
+<!-- CSS styles and JSON links -->
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="style.css">
+<meta name="msapplication-config" content="browserconfig.xml">
+    <script src="index.js"></script>
+
+<!-- Favicons -->
+<link href="images/favicon.ico" rel="icon">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="images/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+
+<!-- NAV bar  -->
+<div class="header">
+  <a href="#default" class="logo">Tea_Ceylon</a>
+  
+  <div class="header-right">
+
+    <a href="index.html">Home</a>
+    <a href="teatypes.html">Types of Tea</a>
+    <a href="teamanufacturers.html">Tea Manufactures</a>  
+    <a class="active" href="#buy now">Buy Now</a>
+    <a href="contact.html">Contact Us</a>
+
+
+  </div>
+</div>
+
+ 
+  
+  <section>
+    <h1>Looking for an easy way to taste some of the finest Tea? <br> We've got you covered...</h1>
+    <h3>No matter what your budget and specific needs are.. There's many to choose from</h3>
+    
+      <img src="images/buy.jpg"  style="width: 100%;">
+      
+        
+      
+    
+
+	<div class="form">
+
+		<div class="row1">
+			<div class="span-25">
+				<label for="taxiType">Taxi type</label>
+			</div>
+			<div class="span-75">
+				<select id="taxiType" name="taxiType" onchange="taxiTypeChanged()">
+					<option value="">Select Taxi type</option>
+					<option value="Tuk Tuk">Tuk Tuk</option>
+					<option value="Mini Car">Mini Car</option>
+					<option value="Luxury Car">Luxury Car</option>
+					<option value="Luxury Van">Luxury Van</option>
+					<option value="Luxury Bus">Luxury Bus</option>
+				</select>
+			</div>
+		</div>
+		<div class="row1">
+			<div class="span-25">
+				<label for="fuel">Fuel Efficiency</label>
+			</div>
+			<div class="span-75">
+				<select name="fuel" id="Fuel" onchange="fuelEfficiencyChanged()">
+					<option value="">Select Fuel Efficiency</option>
+					<option value="High">High</option>
+					<option value="Medium">Medium (default)</option>
+					<option value="Low">Low</option>
+				</select>
+			</div>
+		</div>
+		<div class="row1">
+			<div class="span-25">
+				<label for="stay">Stay</label>
+			</div>
+			<div class="span-75">
+				<select name="stay" id="Stay" onchange="stayChanged()">
+					<option value="One Way">Select Stay Type</option>
+					<option value="One Way">One Way</option>
+					<option value="Two Way">Two Way</option>
+					<option value="Over Night">Over night</option>
+				</select>
+			</div>
+		</div>
+		<div class="row1">
+			<div class="span-25">
+				<label for="fname">Distance</label>
+			</div>
+			<div class="span-75">
+				<input type="text" id="Distance" name="distance" placeholder="Distance"
+					onchange="currentDistanceChanged(this.value)">
+			</div>
+		</div>
+		<div class="row1">
+			<div class="span-25">
+				<label for="lname">Pick Up Location Address</label>
+			</div>
+			<div class="span-75">
+				<input type="text" id="location" name="location" placeholder="Pick Up Location">
+			</div>
+		</div>
+
+		<div class="buttons">
+			<input class="button" type="submit" value="Order Favourite" onclick="getFromFavourite()">
+			<input class="button" type="submit" value="Add to Favourite" onclick="addFavourite()">
+			<input class="button" type="submit" value="Reserve" onclick="reserve()">
+			<input class="button" type="submit" value="Add Order" onclick="addOrder()">
+
+		</div>
+
+	</div>
+
+	<div class="row1">
+
+		<div class="column1">
+			<h3>Current Reservation</h3>
+      <label class="label" for="currentTaxi" id="currentTaxi">Current Taxi : -</label>
+      <br>
+      <label class="label" for="currentTaxi" id="fuelEfficiency">Fuel Efficiency : -</label>
+      <br>
+      <label class="label" for="currentTaxi" id="StayCurrent">Type of Stay : -</label>
+      <br>
+      <label class="label" id="currentDistance">Distance : 0</label>
+      <br>
+			<label class="label" for="costofcurrent" id="currentCost">Cost of Current Taxi : 0</label>
+		</div>
+
+		<div class="column1">
+      <h3>Overall Reservation</h3>
+      <br>
+      <label class="label" for="overallOrder">All Taxi(s)</label>
+      <br>
+      <label class="label" id="lbl1">.</label>
+      <br>
+      <label class="label" for="overallOrder">Overall Cost</label>
+      <br>
+      <label class="label" id="lbl2"> 0 </label>
+      <br>
+      <label class="label" for="overallOrder">Total Distance</label>
+      <br>
+			<label class="label" id="lbl3"> 0 </label>
+		</div>
+
+	</div>
+
+
+  <div class="footer">Created by Thumindu | Pictures from Unsplash.com | © 2020 All rights reserved.<br>
+  </div>
+
+	
+	<script>
+		var type = '';
+		var distance = 0;
+		var fuelEfficiency = '';
+		var stay = '';
+		var Cost = 0;
+		function taxiTypeChanged() {
+			type = document.getElementById("taxiType").value;
+			document.getElementById("currentTaxi").innerHTML = "Current Taxi : " + type;
+			cost();
+		}
+		function fuelEfficiencyChanged() {
+			fuelEfficiency = document.getElementById("Fuel").value;
+			document.getElementById("fuelEfficiency").innerHTML = "Fuel Efficiency : " + fuelEfficiency;
+			cost();
+		}
+		function stayChanged() {
+			stay = document.getElementById("Stay").value;
+			document.getElementById("StayCurrent").innerHTML = "Stay : " + stay;
+			cost();
+		}
+		function currentDistanceChanged(val) {
+			distance = val;
+			document.getElementById("currentDistance").innerHTML = "Distance : " + distance;
+			cost();
+		}
+
+		function cost() {
+
+			var costType = 0;
+			var costStay = 0;
+			var costFlue = 0;
+
+			if (type == "Tuk Tuk") {
+				costType = 50;
+			}
+			if (type == "Mini Car") {
+				costType = 75;
+			}
+			if (type == "Luxury Car") {
+				costType = 100;
+			}
+			if (type == "Luxury Van") {
+				costType = 150;
+			}
+			if (type == "Luxury Bus") {
+				costType = 200;
+			}
+
+
+			if (fuelEfficiency == "High") {
+				costFlue = 2000;
+			}
+			if (fuelEfficiency == "Medium") {
+				costFlue = 1000;
+			}
+			if (fuelEfficiency == "Low") {
+				costFlue = 500;
+			}
+
+			if (stay == "One Way") {
+				costStay = costType * distance;
+			}
+			if (stay == "Two Way") {
+				costStay = 2 * (costType * distance);
+			}
+			if (stay == "Over Night") {
+				costStay = 2 * (costType * distance) + 5000;
+			}
+
+			Cost = costFlue + costStay;
+			document.getElementById("currentCost").innerHTML = "Cost of current Taxi  : " + Cost;
+		}
+
+		function addOrder() {
+			var currentTaxis = document.getElementById("lbl1").innerHTML;
+			var allTaxis = currentTaxis + type + " , ";
+			document.getElementById("lbl1").innerHTML = allTaxis;
+
+
+			//document.getElementById("lbl2").innerHTML = "0";
+			var currentTot = document.getElementById("lbl2").innerHTML;
+			var tot = parseInt(Cost, 10) + parseInt(currentTot, 10);
+			document.getElementById("lbl2").innerHTML = tot;
+
+
+			var currentTotDistance = document.getElementById("lbl3").innerHTML;
+			var totDistance = parseInt(distance, 10) + parseInt(currentTotDistance, 10);
+			document.getElementById("lbl3").innerHTML = totDistance;
+		}
+
+		function reserve() {
+			document.getElementById("lbl1").innerHTML = "";
+			document.getElementById("lbl2").innerHTML = "0";
+			document.getElementById("lbl3").innerHTML = "0";
+
+			document.getElementById("currentCost").innerHTML = "cost of current Taxi  : ";
+			document.getElementById("currentDistance").innerHTML = "Distance : ";
+			document.getElementById("StayCurrent").innerHTML = "Stay : ";
+			document.getElementById("fuelEfficiency").innerHTML = "Fuel Efficiency : ";
+			document.getElementById("currentTaxi").innerHTML = "Current Taxi : ";
+
+			alert("Reservation Successfull. Thank you.");
+		}
+
+		function addFavourite() {
+			var location = document.getElementById("location").value;
+			localStorage.setItem("taxiType", type);
+			localStorage.setItem("distance", distance);
+			localStorage.setItem("fuelEfficiency", fuelEfficiency);
+			localStorage.setItem("stay", stay);
+			localStorage.setItem("location", location);
+			localStorage.setItem("Cost", Cost);
+			alert(localStorage.getItem("stay"));
+		}
+		function getFromFavourite() {
+			document.getElementById("currentCost").innerHTML = "cost of current Taxi  : " + localStorage.getItem("Cost");
+			document.getElementById("currentDistance").innerHTML = "Distance : " + localStorage.getItem("distance");
+			document.getElementById("StayCurrent").innerHTML = "Stay : " + localStorage.getItem("stay");
+			document.getElementById("fuelEfficiency").innerHTML = "Fuel Efficiency : " + localStorage.getItem("fuelEfficiency");
+			document.getElementById("currentTaxi").innerHTML = "Current Taxi : " + localStorage.getItem("taxiType");
+
+
+			document.getElementById("taxiType").value = localStorage.getItem("taxiType");
+			document.getElementById("Fuel").value = localStorage.getItem("fuelEfficiency");
+			document.getElementById("Stay").value = localStorage.getItem("stay");
+			document.getElementById("Distance").value = localStorage.getItem("distance");
+			document.getElementById("location").value = localStorage.getItem("location");
+
+		}
+	</script>
+&nbsp;
+  </section>
+  &nbsp;
+  
+  
+    
+
+</body>
+</html>
