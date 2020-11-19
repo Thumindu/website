@@ -1,18 +1,18 @@
 {
-    "name": "Our Cat Style",
-    "short_name": "CatStyle",
+    "name": "Ceylon Tea Style",
+    "short_name": "CeylonTeaStyle",
     "start_url": "index.html",
-    "description": "Our first attempt at a manifest!",
+    "description": "Web Development Assignment",
     "lang": "en",
     "orientation": "portal-primary",
     "icons": [
         {
-            "src": "appimages/android-chrome-192x192.png",
+            "src": "images/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "appimages/android-chrome-512x512.png",
+            "src": "images/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
