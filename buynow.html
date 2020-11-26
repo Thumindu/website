@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Meta tags -->	
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tea_Ceylon| BUY NOW</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="" name="keywords">
+<meta content="" name="description">
+
+
+<!-- CSS styles and JSON links -->
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="buynowStyle.css">
+<meta name="msapplication-config" content="browserconfig.xml">
+<script src="script.js"></script>    
+
+<!-- Favicons -->
+<link href="images/favicon.ico" rel="icon">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="images/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+
+<!-- NAV bar  -->
+<div class="header">
+  <a href="#default" class="logo">Tea_Ceylon</a>
+  
+  <div class="header-right">
+
+    <a href="index.html">Home</a>
+    <a href="teatypes.html">Types of Tea</a>
+    <a href="teamanufacturers.html">Tea Manufactures</a>  
+    <a class="active" href="#buynow">Buy Now</a>
+    <a href="contact.html">Contact Us</a>
+
+
+  </div>
+</div>
+
+ 
+  
+  <section>
+    <h1>Looking for an easy way to taste some of the finest Tea? <br> We've got you covered...</h1>
+    <h3>No matter what your budget and specific needs are.. There's many to choose from</h3>
+    
+      <img src="images/buy.jpg" alt="buy" style="width: 100%;">
+	  
+	  
+<!--Panel 1  -->
+	  
+	  <div class="panel1">
+		<form method="GET">
+			<div class="row">
+				
+		  <label for="teamanufacturers">Tea Manufactures</label>
+	
+		  
+		 <select onchange="UpdateOrder()" id="teamanufacturers" name="teamanufacturers" required>
+			<option value="dilma">Dilma</option>
+			<option value="jones">Jones</option>
+			<option value="george steuart">George Steuart</option>
+			<option value="malwatte valley plantations">Malwatte Valley plantations</option>
+			<option value="prestige ceylon teas">Prestige Ceylon Teas</option>
+			<option value="empire teas">Empire Teas</option>
+
+		  </select>
+
+          <label for="packagingtype">Packaging Type</label>
+		  <select onchange="UpdateOrder()" id="packagingtype" name="packagingtype" required>
+			<option value="tins">Tins (default)</option>
+			<option value="paper pouches">Paper pouches</option>
+			<option value="bags">Bags</option>
+		</select>
+	
+		  <label for="size">Size</label>
+		  <select onchange="UpdateOrder()" id="size" name="size" required>
+			<option value="medium">Medium (default)</option>
+			<option value="small">Small</option>
+			<option value="large">Large</option>
+		  </select>
+		
+
+
+		  <label for="extras">Extras</label>
+		  <select onchange="UpdateOrder()" id="extras" name="extras" required>
+			<option value="mug">Mug</option>
+			<option value="silver pin">Silver Pin</option>
+			<option value="wooden souvenir">Wooden Souvenir</option>
+		  </select>
+
+
+		</div>
+	  </div>     
+	  
+	  
+	  &nbsp;
+	 
+	<!--Panel 2  -->
+
+	
+	  <div class="panel2">
+		  <div class="row">
+
+
+			  <label for="tea_manufacturers">Selected Tea Manufacturers</label>
+			  </div>
+			  <input type="text" id="tea_manufacturers" name="tea_manufacturers" readonly>
+
+		      <label for="packaging_type">Selected Packaging Type</label>
+		      <input type="text" id="packaging_type" name="packaging-type" readonly>
+
+ 
+			  <label for="size">Selected Size</label>
+			  <input type="text" id="size" name="size" readonly>
+
+			  <label for="extras">Selected Extras</label>
+			  <input type="text" id="extras" name="extras" readonly>
+
+
+			  <label for="grandtotal">Grand Total (LKR)</label>
+			  <input type="text" id="grandtotal" name="grandtotal" readonly>
+
+			  <button type="submit" name="submit" class="submit" onclick="AddToCart()">Add to order
+			</button>
+
+			<button type="submit" name="submit" class="submit" onclick="AddToFav()">Favourite</button>
+		</div>
+
+		<button type="submit" name="submit" class="submit" onclick="OrderFav()">Order Favourite
+		</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		  </div>
+
+	
+&nbsp;
+  </section>
+  &nbsp;
+  
+  
+    
+
+</body>
+</html>
